@@ -1,4 +1,4 @@
-------------------Part1------------------
+----------------------------Part1----------------------------
 Q1. After training a Self-Organizing Map, output neurons that win for similar input are usually far apart from each other in the map.
 False
 
@@ -59,7 +59,7 @@ False
 Q19. Convolutional Neural Network(CNN) is just another classification model with higher accuracies.
 False
 
-------------------Part2------------------
+----------------------------Part2----------------------------
 Q1. An autoassociative network is: 
     (a) a neural network that contains no loops.
     (b) a neural network that contains feedback.
@@ -181,7 +181,7 @@ Q16. What is the topological mapping in a self-organizing feature map(SOM)?
     (d) A mapping where similar inputs produce different outputs, which preserves the possibility distribution of the training data.
 Answer: B
 
-------------------Part3------------------
+----------------------------Part3----------------------------
 Q1. What is Hebb's rule?
 Answer: This is the simplest way of training an artificial neuron: the synapse between two neurons is reinforced if there is co-activity, or equivalently if for a given neuron its input is 1 and simultaneously its output is 1.
 wj = wj + xjy
@@ -205,8 +205,8 @@ Answer: These appear in Hopfield networks. These are stable states that do not c
 
 Q7. What are the weights w0, w1, and w2 for the perceptron whose decision surface is illustrated below. You should assume that the decision surface crosses the X1 axis at -5 and corsses the X2 axis at 8.
 
-
-                   X2 + /            
+                   X2
+                    ^ + /            
                     |  /            
           +         |+/            
                     |/            
@@ -215,7 +215,7 @@ Q7. What are the weights w0, w1, and w2 for the perceptron whose decision surfac
                +  / |          - 
         +        /  |    -       
                 /   |            
----------------/----|------------------------X1
+---------------/----|------------------------>X1
               /     |            
         +    /      |   -        
             /       |            
