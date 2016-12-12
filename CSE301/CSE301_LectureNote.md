@@ -424,7 +424,7 @@ E = 1/2∑e(ye-oe)^2         这里的1/2还是为了消掉那个指数2
 - Unsupervised learning discovers significant features or patterns in the input data through general rules that operate locally
 - UL networks typically consist of two layers with feed-forward connections and elements to facilitate 'local' learning
 
-#### Henbbian Learning (1949)
+#### Hebbian Learning (1949)
 - w(n+1) = w(n) + ηx(n)y(n); 这里的n是循环次数
 - for linear activation function
   - w(n+1) = w(n)[1+ηx(n)^Tx(n)]
