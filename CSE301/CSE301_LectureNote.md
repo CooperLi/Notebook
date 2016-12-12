@@ -632,6 +632,7 @@ E = 1/2∑e(ye-oe)^2         这里的1/2还是为了消掉那个指数2
     - 也就是说 a *fully connected, symmetrically weighted* network where each node functions both as input and output node.
 - single layer
 - each node as both input and output units
+- 不包括self-connection
 - node values are iteratively updated, based on the weighed inputs from all other nodes, until stabilized
 - It is usually *initialized* with appropriate weights instead of being trained.
     - **不一样的是, 我们自己design weight**
@@ -665,7 +666,7 @@ wij=∑k=1->p xi^k*xj^k if i≠j; or =0 if i=j
     - 就有Wx ≈ nx^i-px^i = (n-p)x^i
 - 这里的x就是一个外部输入, 之前不是说了, 这个网络是接受其他的神经元的输出的, 这里再加一个x当做额外的输入
 - the output of a neuron i at time t is:
-    - vi(t) = sng(∑wijvi(t-1))
+    - vi(t) = sig(∑wijvi(t-1))
 - state update rule
     - Asynchronous mode, 一个一个的更新, 而不是全部一起更新
     - update rule
@@ -679,6 +680,47 @@ a 4 node network, stores 2 patterns(1 1 1 1) and (-1 -1 -1 -1)
 weights: wij=1, for i≠j, and wii=o for all i
 W = (1 1 1 1)外积(1 1 1 1)^T + (-1 -1 -1 -1) 外积(-1 -1 -1 -1)^T
 current input pattern: (1 1 1 -1)
-node 2: w2,1*x1 + w2,3 *x3 + w2,4*x4 + I2 = 1 + 1 - 1 + 1 = 2
+node 2: w21*x1 + w23 *x3 + w24*x4 + I2 = 1 + 1 - 1 + 1 = 2
 node 4: w
 ```
+
+## Week14-1
+#### Hopp
+- Design connection 在各个neuron之间, 但自己没有self-connection
+- recall something(dynamics)
+- 确保stable
+- why can do this?
+- will Hopfield AM converge with any given recall input?
+    - by introducing an energy function to this mosdel.
+    - 只要证明这个能量方程式单调递减的, 就说明稳定
+- E = -1/2* ∑i=1->n ∑i=1->n wijvivj - ∑i=1->n Iivi
+    - vi = sgn(∑j=1->N,j≠i wjivi)
+- stable states(attractor) : the number of state = 2^(number of neuron)
+
+#### Storage capacity
+- C = 0.15n, n是neuron的个数
+
+
+## Review
+- Perceptron learning
+    - △w = learning rate•(target - output)•input
+
+#### Hint
+- PPT **most important**
+- Tutorial **important**
+- Lab **not required**, 有些问题用matlab问的.
+- 今年的试卷: 4个大问题
+    1. Answer questions: 5 * 5 = 25 分, 5个问题. 不需要写很长的答案
+    2. Solve the following problems using some sepcific model : 3 + 5 + 10 + 7 = 25, 4个问题, 偏实践.
+        - 先计算一些东西
+        - 再include matlab, **SOM**, 在ppt上有相应的代码
+    3. CNN相关问题, 20分, 分成两部分10+10.
+        - part1: 一些小问题
+            - model structure
+            - size change (image ->feature map), parameters
+        - part2: 一些实际问题
+            - 不是让你design
+            - CNN 和MLP一样吗? 有什么区别?
+            - 等...
+    4. Specific Design 对于现实问题, 30分, 两道题15+15
+
