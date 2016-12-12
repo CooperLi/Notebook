@@ -467,6 +467,7 @@ E = 1/2∑e(ye-oe)^2         这里的1/2还是为了消掉那个指数2
 	- w = w(∞) =  e1; where e1 is the principal eigenvector of Rx.
 - 可以缩小数据的维度, 用投影的方式.二维的投影到坐标轴上就成了一维的.
 - 只能找到一个最大的eignvector. 你会说再加一个neuron, 但是用的方法都是一样的, 所以两个没有区别.
+
 ## Week11-1
 - Deflation Method: subtract the principal component from the input
 	- Assume that the first component is already obtained; then the output value can be "deflated" by the following transformation:
