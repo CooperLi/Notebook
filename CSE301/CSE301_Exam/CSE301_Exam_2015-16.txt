@@ -163,8 +163,6 @@ Q14. Adapt the weight vector of the winning unit in last question according to t
     (d) Wwinner = [0.3,0.15,2.7]
 Answer: B. 具体算法: 之前的winner weight 是W1, 然后我们用公式, NewWeight = OldWeight + η*(input - OldWeight)
 
-Q15. Which of the following statements is NOT true for a self-organizing feature map (SOM)?
-    (a) 
 
 Q15. Which of the following statements is NOT true for a self-organizing feature map (SOM)?
     (a) The size of the neighbourhood is based on soft competitive learning.

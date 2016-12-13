@@ -514,8 +514,10 @@ E = 1/2∑e(ye-oe)^2         这里的1/2还是为了消掉那个指数2
 - 结论: The clusters formed are *highly sensitive* to the initial data.
 - 有些unit永远都是loss的, 没有学习, 没有激活, 叫 *dead unit*
 - 怎么解决? 
-- leak leaning
+- leaky leaning
 	- 鼓励loser学习一点点
+    - w(t+1) = w(t) + [ηw(x-w(t))] or + [ηL(x-w(t))]
+        - where ηw(t) >> ηL(t)
 
 ## Week12-1
 #### Vector Quantization(VQ)
