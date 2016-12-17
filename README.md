@@ -1,2 +1,2 @@
 # Notebook
-This Repo is used for reversion of the courses which I made the note.
+This Repo contains the Note about the lecture courses.
